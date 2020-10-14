@@ -18,21 +18,10 @@
     )
   }
 
-  const PropTypes = {
-    string(props, propName, componentName) {
-      if (typeof props[propName] !== 'string') {
-        return new Error(
-          `Hey, the component ${componentName} needs the prop ${propName} to be a string, but a ${typeof props[
-            propName
-            ]} was passed`,
-        )
-      }
-    },
-  }
 
   Message.propTypes = {
-    subject: PropTypes.string,
-    greeting: PropTypes.string,
+    subject: PropTypes.string.isRequired,
+    greeting:PropTypes.string.isRequired,
   }
 
   const element = (
